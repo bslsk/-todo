@@ -10,6 +10,13 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBAction func CheckboxClicked(sender: NSButton) {
+        switch(sender.state) {
+        case NSOnState: print("It's on")
+        case NSOffState: print("It's Off")
+        default: print("Error:\(sender.state)")
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
